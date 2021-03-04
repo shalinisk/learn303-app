@@ -11,7 +11,7 @@ def hello():
     print("I am the hello function")
     return "Hello there"
 
-# @app.route("/hello/<user>")
-# def hello(user):
-#     print("I am the hello user function")
-#     return f"Hello there, {user}!"
+@app.route("/hello/<user>")
+def hello(user):
+    print("I am the hello user function")
+    return f"Hello there, {user}!"
