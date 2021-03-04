@@ -1,4 +1,7 @@
 from flask import Flask
+import os
+
+
 app = Flask(__name__)
 
 @app.route("/")
@@ -12,6 +15,7 @@ def hello():
     return "Hello there"
 
 @app.route("/hello/user")
-def hello():
+def hellouser():
+    user = os.environ('USER')
     print("I am the hello user function")
     return f"Hello there, {user}!"
