@@ -16,6 +16,6 @@ def hello():
 
 @app.route("/hello/user")
 def hellouser():
-    user = os.environ('USER')
+    user = os.environ['USER']
     print("I am the hello user function")
     return f"Hello there, {user}!"
